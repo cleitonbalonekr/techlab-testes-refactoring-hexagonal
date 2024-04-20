@@ -1,6 +1,5 @@
 import crypto from "crypto";
 import express from "express";
-//import pgp from "pg-promise";
 import mysql from 'promise-mysql'
 import { validateCpf as validate } from "./validateCpf";
 const app = express();
@@ -8,7 +7,6 @@ app.use(express.json());
 
 app.post("/signup", async function (req, res) {
   let result;
-  // const connection = pgp()("postgres://postgres:123456@localhost:5432/app");
   const connection = await  mysql.createConnection({
     user: 'root',
     password: 'root',
