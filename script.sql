@@ -13,7 +13,7 @@ CREATE TABLE account
     is_driver    BOOLEAN NOT NULL DEFAULT FALSE
 );
 
-CREATE TABLE cccat15_ride
+CREATE TABLE ride
 (
     ride_id      CHAR(36),
     passenger_id CHAR(36),
